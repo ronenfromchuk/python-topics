@@ -34,3 +34,4 @@ class Person:
         return f'Person id:{self.id} name:{self.__name} age: {self.__age}'
 
     def __repr__(self):
+        return f'Person id:{self.id} name:{self.__name} age: {self.__age}'
