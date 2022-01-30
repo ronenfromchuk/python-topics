@@ -1,0 +1,38 @@
+# File name: widgets.kv
+<DbGenWidget>:
+    GridLayout:
+        cols:1
+        size: root.width - 200, root.height - 200
+        pos: 100, 100
+        GridLayout:
+            cols:2
+            Label:
+                text: "Add to DB"
+            Label:
+                text: "Replace DB"
+            CheckBox:
+                id: rbutton1
+                group: 'radio button'
+                state: 'down'
+                on_press: root.switchstate1()
+            CheckBox:
+                id: rbutton2
+                group: 'radio button'
+                state: 'normal'
+                on_press: root.switchstate2()
+            Label:
+                id: label1
+                text: root.slabel1
+            Label:
+                id: label2
+                text: root.slabel2
+            Slider:
+                id: slider
+                min:0
+                max: 100
+                step:1
+                orientation: 'horizontal'
+                size_hint_x: None
+                width: 500
+            Label:
+                text: str(slider.value)
